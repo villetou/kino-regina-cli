@@ -41,7 +41,7 @@ if root:
 
         print ("")
         print (title)
-        print (weekdays[time_obj.weekday()], time_obj)
+        print (weekdays[time_obj.weekday()], time_obj.strftime('%d.%m.%Y %H:%M'))
         print (link)
 
     print ("") 
