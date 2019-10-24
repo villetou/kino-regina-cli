@@ -60,7 +60,7 @@ if root:
         printHeader (weekdays[day.weekday()], day.strftime('%d.%m.%Y'))
         for show in shows:
             print ("")
-            print (show['datetime'].strftime('%H:%M'), show['title'])
-            print (show['link'])
+            print (show['datetime'].strftime('%H:%M'), show['title'], bcolors.OKBLUE)
+            print (show['link'], bcolors.ENDC)
         print ("")
         printDelimiter()
