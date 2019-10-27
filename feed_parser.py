@@ -9,10 +9,10 @@ regexStr = r"""<div class="title-container d-md-flex aic fl">(?:\s*)<a href="(.+
 
 showRegex = re.compile(regexStr)
 
-def _findAllMovieElements(rawXml: str):
+def _find_all_movie_elements(rawXml: str):
     return re.findall(showRegex, rawXml)
 
-def _toMovieDict(show: tuple) -> dict:
+def _to_movie_dict(show: tuple) -> dict:
     return {
         'link': show[0],
         'title': show[1],
@@ -20,5 +20,5 @@ def _toMovieDict(show: tuple) -> dict:
         'shopId': show[3]
     }
 
-def parseFeed(rawXml: str) -> List[dict]:
-    return map(_toMovieDict, _findAllMovieElements(rawXml))
+def parse(raw_xml: str) -> List[dict]:
+    return map(_to_movie_dict, _find_all_movie_elements(raw_xml))
