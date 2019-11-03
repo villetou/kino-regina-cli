@@ -31,6 +31,8 @@ showsByDate = {}
 
 shows = parseFeed(contents)
 
+sys.exit("Test error on CircleCI")
+
 if shows:
     
     # Group by date
