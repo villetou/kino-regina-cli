@@ -31,10 +31,7 @@ showsByDate = {}
 
 shows = parseFeed(contents)
 
-sys.exit("Test error on CircleCI")
-
 if shows:
-    
     # Group by date
     for show in shows:
         date_str = show['datetime'].strftime('%d-%m-%Y')
@@ -55,3 +52,5 @@ if shows:
             print (show['link'], bcolors.ENDC)
         print ("")
         printDelimiter()
+else:
+    sys.exit("No shows found")
